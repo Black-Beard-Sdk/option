@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Bb.Option.Option
+namespace Bb.Option
 {
 
     public class CommandLineOption : CommandLineApplication
@@ -14,6 +14,7 @@ namespace Bb.Option.Option
             return base.GetHelpText(commandName);
         }
 
+        public object Result { get; set; }
         
     }
 

@@ -6,9 +6,66 @@ using System.Text;
 namespace Bb.CommandLines.Ins
 {
 
-    internal static class Input
+    public static class Input
     {
 
+
+        public static bool Confirm(string message = null)
+        {
+            while (true)
+            {
+
+                if (!string.IsNullOrEmpty(message))
+                    Console.WriteLine(message);
+
+                var cmd = Console.ReadLine().ToLower();
+                switch (cmd)
+                {
+                    case "y":
+                    case "yes": 
+                        return true;
+                    
+                    case "n":
+                    case "no":
+                        return false;
+
+                    default: continue;
+                }
+
+            }
+        }
+
+        public static string GetPassword(string message = null)
+        {
+
+            if (!string.IsNullOrEmpty(message))
+                Console.WriteLine(message);
+
+            var password = new StringBuilder();
+            while (true)
+            {
+                var key = Console.ReadKey(true);
+                if (key.Key == ConsoleKey.Enter)
+                {
+                    break;
+                }
+                else if (key.Key == ConsoleKey.Backspace)
+                {
+                    if (password.Length > 0)
+                    {
+                        password.Remove(password.Length - 1, 1);
+                        Console.Write("\b \b");
+                    }
+                }
+                else
+                {
+                    password.Append(key.KeyChar);
+                    Console.Write("*");
+                }
+            }
+            Console.WriteLine();
+            return password.ToString();
+        }
 
 
         public static MemoryStream GetInputRedirection()

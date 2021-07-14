@@ -1,0 +1,15 @@
+{
+  "$type": "OptionTestProject.Config, OptionTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://Config/schemas",
+  "title": "Config",
+  "type": "object",
+  "properties": {
+    "Test": {
+      "type": [
+        "null",
+        "string"
+      ]
+    }
+  }
+}

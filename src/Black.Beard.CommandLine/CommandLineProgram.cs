@@ -4,28 +4,29 @@ using Microsoft.Extensions.CommandLineUtils;
 using System;
 
 
-namespace Bb.Json
+namespace Bb
 {
 
-
-    public partial class CommandLineProgram<TCommandLine, T> 
+    public partial class CommandLineProgram<TCommandLine, T>
         where TCommandLine : Command<T>, new()
          where T : CommandLineApplication, new()
     {
 
+
+        public static T Result { get; private set; }
 
         public static int ExitCode { get; private set; }
 
         public static void Main(params string[] args)
         {
 
-            T app = null;
+            
             var cmd = new TCommandLine();
             try
             {
 
-                app = cmd.Initialize(new T());
-                int result = app.Execute(args);
+                Result = cmd.Initialize(new T());
+                int result = Result.Execute(args);
 
                 Output.Flush();
 
@@ -34,7 +35,7 @@ namespace Bb.Json
             }
             catch (System.FormatException e2)
             {
-                FormatException(app, e2);
+                FormatException(Result, e2);
             }
             catch (CommandParsingException e)
             {
@@ -46,7 +47,7 @@ namespace Bb.Json
                 if (e.HResult > 0)
                     Environment.ExitCode = CommandLineProgram<TCommandLine, T>.ExitCode = e.HResult;
 
-                app.ShowHelp();
+                Result.ShowHelp();
 
                 Environment.ExitCode = CommandLineProgram<TCommandLine, T>.ExitCode = 1;
 
@@ -65,7 +66,7 @@ namespace Bb.Json
 
             }
 
-            
+
 
         }
 

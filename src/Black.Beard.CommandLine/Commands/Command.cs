@@ -43,7 +43,7 @@ namespace Bb.CommandLines
             var methods = this.GetType().GetMethods(System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
 
             foreach (var method in methods)
-                if (method.ReturnType == typeof(T))
+                if (method.Name != nameof(Command<T>.Initialize) && method.ReturnType == typeof(T))
                 {
                     var parameters = method.GetParameters();
                     if (parameters.Length == 1 && parameters[0].ParameterType == typeof(T))

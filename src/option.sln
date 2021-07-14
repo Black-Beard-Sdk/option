@@ -5,9 +5,13 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "option", "option\option.csproj", "{4BD6771C-BCC8-47F4-BAA9-8A7AA6AFB44F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Black.Beard.Option.Lib", "Black.Beard.Option.Lib\Black.Beard.Option.Lib.csproj", "{2F9D459D-B99E-4481-8EFB-A661EF57953B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Black.Beard.Option.Lib", "Black.Beard.Option.Lib\Black.Beard.Option.Lib.csproj", "{2F9D459D-B99E-4481-8EFB-A661EF57953B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Black.Beard.CommandLine", "Black.Beard.CommandLine\Black.Beard.CommandLine.csproj", "{EE3CB2A6-6451-4D81-BC5B-6F16FBEFE80F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Black.Beard.CommandLine", "Black.Beard.CommandLine\Black.Beard.CommandLine.csproj", "{EE3CB2A6-6451-4D81-BC5B-6F16FBEFE80F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OptionTestProject", "OptionTestProject\OptionTestProject.csproj", "{4C21CBE8-BD59-4344-BB46-C938D9859C06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Black.Beard.Extensions.Configuration", "Bb.Extensions.Configuration\Black.Beard.Extensions.Configuration.csproj", "{4093EF83-0848-411E-8688-6FF43FF24D50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{EE3CB2A6-6451-4D81-BC5B-6F16FBEFE80F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE3CB2A6-6451-4D81-BC5B-6F16FBEFE80F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE3CB2A6-6451-4D81-BC5B-6F16FBEFE80F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C21CBE8-BD59-4344-BB46-C938D9859C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C21CBE8-BD59-4344-BB46-C938D9859C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C21CBE8-BD59-4344-BB46-C938D9859C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C21CBE8-BD59-4344-BB46-C938D9859C06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4093EF83-0848-411E-8688-6FF43FF24D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4093EF83-0848-411E-8688-6FF43FF24D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4093EF83-0848-411E-8688-6FF43FF24D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4093EF83-0848-411E-8688-6FF43FF24D50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

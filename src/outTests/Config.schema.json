@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://ConfigurationSerializer/Config/schemas",
+  "title": "ConfigurationSerializerOfConfig",
+  "type": "object",
+  "properties": {
+    "Kind": {
+      "type": [
+        "null",
+        "string"
+      ],
+      "enum": [
+        "Bb.Helpers.ConfigurationSerializer`1[[OptionTestProject.Config, OptionTestProject, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], Black.Beard.Option.Lib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+      ]
+    },
+    "Datas": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/definitions/ConfigurationSerializerItemOfConfig"
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "ConfigurationSerializerItemOfConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Name": {
+          "type": [
+            "null",
+            "string"
+          ]
+        },
+        "Datas": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/definitions/Config"
+            }
+          ]
+        }
+      }
+    },
+    "Config": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Test": {
+          "type": [
+            "null",
+            "string"
+          ]
+        }
+      }
+    }
+  }
+}
